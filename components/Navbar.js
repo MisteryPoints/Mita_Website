@@ -58,7 +58,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="block">
       {({ open }) => (
         <>
-          <div className="w-full mx-auto max-w-8xl px-2 sm:px-6 lg:px-8 text-lg fixed bg-white shadow-md shadow-white">
+          <div className="w-full mx-auto max-w-8xl px-2 sm:px-6 lg:px-8 text-lg fixed bg-white shadow-lg shadow-white">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -73,7 +73,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"> 
                 <Link className="flex flex-shrink-0 items-center" href="/"> 
-                  <Image src="/main/logo.png" width="35" height="35" alt="Congregación Mita" className="hidden h-8 w-auto lg:block"/>
+                  <Image src="/main/logo.png" width="35" height="35" alt="Congregación Mita" className="hidden h-8 w-auto lg:block hover:h-8 hover:w-8 transition-all duration-300"/>
                   <Image src="/main/logo.png" width="35" height="35" alt="Congregación Mita" className="block h-8 w-auto lg:hidden"/>
                   <p className='text-gray-700 font-["Montserrat"] select-none hover:text-gray-900'>Congregación Mita</p>
                 </Link> 
@@ -83,7 +83,7 @@ export default function Navbar() {
                   <div className="flex space-x-4 ">
                     {navigation.map((item) => item.name !== 'Doctrina' ? (
                       <Menu as="div" className="relative ml-3" key={item.key}> 
-                        <Menu.Button className={classNames( language.current ? 'bg-gray-600 text-white' : 'text-gray-800 hover:bg-gray-100 hover:text-gray-700 hover:shadow-xl', 'px-3 py-[18px]')} aria-current={item.current ? 'page' : undefined} onClick={() => setSeccion(item.name)} >  
+                        <Menu.Button className={classNames( language.current ? 'bg-gray-600 text-white' : 'text-gray-800 hover:bg-gray-100 hover:text-gray-700 hover:shadow-xl transition-all duration-300', 'px-3 py-[18px]')} aria-current={item.current ? 'page' : undefined} onClick={() => setSeccion(item.name)} >  
                           { (item.name != null) ? item.name : ""}   <FontAwesomeIcon icon={faCaretDown}/>
                         </Menu.Button> 
                         
@@ -110,7 +110,7 @@ export default function Navbar() {
                         </Transition>
                       </Menu>
                     ) : (
-                      <Link key={item.name} href={item.href} className={classNames( item.current ? 'bg-gray-600 text-white' : 'text-gray-800 hover:bg-gray-100 hover:text-gray-700', 'px-3 py-[18px]')} aria-current={item.current ? 'page' : undefined}>
+                      <Link key={item.name} href={item.href} className={classNames( item.current ? 'bg-gray-600 text-white' : 'text-gray-800 hover:bg-gray-100 hover:text-gray-700', 'px-3 py-[18px] ')} aria-current={item.current ? 'page' : undefined}>
                         {item.name}
                       </Link>
                     ))}

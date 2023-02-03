@@ -16,7 +16,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet"></link>
       </Head> 
-      <body className="bg-[url('/main/cloud.jpg')] bg-center bg-no-repeat bg-fixed">
+      <body className="bg-[url('/main/cloud.jpg')] bg-center bg-no-repeat bg-fixed overscroll-x-none">
         <Main />
         <NextScript />
       </body>
